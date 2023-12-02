@@ -194,6 +194,9 @@ header {
     transition: 0.5s;
     border: none;
     vertical-align: middle;
+    font-family: "Geologica";
+    font-weight: 300;
+    
 }
 
 input {
@@ -213,6 +216,7 @@ input {
 .btn:hover {
     background-position: right center;
     color: white;
+    cursor: pointer;
 }
 
 /*IMAGES*/
