@@ -35,9 +35,10 @@
   <!-- Echo commands for header and filters -->
   <header>
     <?php
-      echo "<img class='logo' src='./images/smallBannerLogo.png' alt='logo'>";
+      echo "<a class='logo' href='index.php'><img class='logo' src='./images/smallBannerLogo.png' alt='logo'></a>";
       echo "<nav class='sample'>";
       echo "<ul class='nav_links'>";
+      echo "<li>"; echo "<a href='index.php?filter='>ALL RECIPES</a>"; echo "</li>";
         echo "<li>"; echo "<a href='index.php?filter=chicken'>CHICKEN</a>"; echo "</li>";
         echo "<li>"; echo "<a href='index.php?filter=pork'>PORK</a>"; echo "</li>";
         echo "<li>"; echo "<a href='index.php?filter=beef'>BEEF</a>"; echo "</li>";
@@ -55,6 +56,7 @@
   <!-- Mobile hamburger menu links w/ anchors -->
   <nav class="mobile-nav">
     <?php
+      echo "<a href='index.php?filter='>ALL RECIPES</a>";
       echo "<a href='index.php?filter=chicken'>CHICKEN</a>";
       echo "<a href='index.php?filter=pork'>PORK</a>";
       echo "<a href='index.php?filter=beef'>BEEF</a>";
@@ -133,7 +135,7 @@
               // Displays message for when search parameter is not found
               echo '<div>';
                 echo "<img class='errorImg' src='./images/errorImg.png' alt='header logo'>";
-                echo '<p class= "errorMsg">Sorry, we couldn&apos;t find what you were looking for.  Please try searching again!</p>';
+                echo '<p class= "errorMsg">Sorry, we couldn&apos;t find "' . $search . '".  Please try searching again!</p>';
               echo '</div>';
             }
         ?>
