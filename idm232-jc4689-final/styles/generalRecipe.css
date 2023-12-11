@@ -33,7 +33,7 @@ header {
 }
 
 .logo:hover{
-    cursor: default;
+    cursor: pointer;
 }
 
 .nav_links {
@@ -358,7 +358,7 @@ footer {
 }
 
 .det_ing ul{
-    list-style-type: none;
+    list-style-type: circle;
 }
 
 /*STEPS HEADER*/
@@ -400,6 +400,15 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+}
+
+.flexContainer hr{
+    border: 3px solid #f25c54;
+    border-radius: 1px;
+    width:50%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 /*MEDIA QUERIES*/
