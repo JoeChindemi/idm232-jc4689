@@ -39,7 +39,7 @@
     <!--Echo header logo -->
     <?php
       echo '<header>';
-      echo '  <img class="logo" src="./images/smallBannerLogo.png" alt="logo">';
+      echo "<a class='logo' href='index.php'><img class='logo' src='./images/smallBannerLogo.png' alt='logo'></a>";
       echo '    <nav class="sample">';
       echo '    </nav>';
       echo '</header>';
@@ -47,11 +47,9 @@
 
     <!--Echo back button logo -->
     <div class="buttonDiv">
-        <?php
-        echo '<a href="./index.php">';
-            echo '<button class="goBack">BACK</button>';
-        echo '</a>';
-        ?>
+        <span class="goBack" onClick="window.history.back();">
+          BACK
+        </span>
     </div>
 
     <!--Echo gridcontainer. This container contains the hero imgage, title, subtitle, and description.  ID is imported based on recID from selected thumbnail image on index page, each element follows the ID number.-->
@@ -133,6 +131,7 @@
             // If step starts with a number, get number minus one for image name
             $firstChar = substr($stepTextArray[$lp],0,1);
             if (is_numeric($firstChar)) {
+              echo "<hr>";
               consoleMsg("First Char is: $firstChar");
               echo '<br></br><br></br>';
               echo '<img src="./images/' . $stepImagesArray[$firstChar-1] . '" alt="Step Image">';
