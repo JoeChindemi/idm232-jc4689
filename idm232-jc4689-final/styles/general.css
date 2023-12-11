@@ -179,7 +179,6 @@ header {
     display: inline-block;
     width: 120px;
     height: 40px;
-    font-weight: bold;
     padding: 7px;
     color: black;
     border: 4px solid #fff;
@@ -193,6 +192,7 @@ header {
     transition: 0.5s;
     border: none;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 input {
